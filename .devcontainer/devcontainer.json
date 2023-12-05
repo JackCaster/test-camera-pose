@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.155.1/containers/azure-functions-python-3
+{
+	"name": "ride-safe-segment-eyetracker",
+	"dockerFile": "../Dockerfile",
+	"build": {
+		"args": {
+			"HTTP_PROXY": "",
+			"HTTPS_PROXY": "",
+			"NO_PROXY": ""
+		}
+	},
+	"runArgs": [
+		// "--gpus",
+		// "all"
+	],
+	"mounts": [
+		// "type=bind,source=${localEnv:HOME}/.ssh,target=/root/.ssh,readonly"
+	],
+	"shutdownAction": "none",
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-vscode.azure-account",
+		"ms-azuretools.vscode-docker",
+		"ms-python.python",
+		"ms-python.black-formatter",
+		"ms-python.flake8",
+		"njpwerner.autodocstring"
+	]
+}
